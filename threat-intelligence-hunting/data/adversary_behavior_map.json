@@ -1,0 +1,29 @@
+{
+  "hypothesis": "A compromised employee account may move to the finance workstation and collect reports.",
+  "behaviors": [
+    {
+      "behavior_id": "B1",
+      "stage": "Lateral Movement",
+      "tactic": "Lateral Movement",
+      "technique_id": "T1021",
+      "technique": "Remote Services",
+      "hypothesis": "The compromised account may use a remote service to reach the finance workstation.",
+      "defensive_opportunities": ["Detect unusual account-to-host access", "Review remote-service process activity"],
+      "telemetry": ["authentication_events", "endpoint_process_events", "network_flow"],
+      "expected_evidence": "An unusual account-to-host connection followed by a remote-service process.",
+      "hunt_id": "H1"
+    },
+    {
+      "behavior_id": "B2",
+      "stage": "Collection",
+      "tactic": "Collection",
+      "technique_id": "T1560",
+      "technique": "Archive Collected Data",
+      "hypothesis": "The adversary may archive sensitive finance reports before transferring them.",
+      "defensive_opportunities": ["Detect archive creation near sensitive file access", "Review outbound transfer after archive creation"],
+      "telemetry": ["endpoint_process_events", "file_access_events", "network_flow"],
+      "expected_evidence": "Archive creation near sensitive file access followed by outbound transfer.",
+      "hunt_id": "H2"
+    }
+  ]
+}
