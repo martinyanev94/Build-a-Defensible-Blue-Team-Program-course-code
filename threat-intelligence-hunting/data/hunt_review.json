@@ -1,0 +1,34 @@
+[
+  {
+    "hunt_id": "H1",
+    "hypothesis": "A remote service session reached finance-api from an unmanaged device.",
+    "observed_evidence": [
+      "authentication event",
+      "unmanaged device posture",
+      "finance-api session"
+    ],
+    "expected_evidence": [
+      "authentication event",
+      "device posture",
+      "application session"
+    ],
+    "status": "supported",
+    "change_type": "control",
+    "change": "Require managed-device posture before finance-api access."
+  },
+  {
+    "hunt_id": "H2",
+    "hypothesis": "An actor archived collected data before an outbound transfer.",
+    "observed_evidence": [
+      "outbound proxy connection"
+    ],
+    "expected_evidence": [
+      "archive-process event",
+      "file access",
+      "outbound transfer"
+    ],
+    "status": "telemetry_gap",
+    "change_type": "monitoring",
+    "change": "Collect archive-process and file-access telemetry on finance workloads."
+  }
+]
