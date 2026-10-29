@@ -1,0 +1,28 @@
+{
+  "evidence_plan": [
+    {
+      "control_id": "AC-01",
+      "control": "Least privilege access review",
+      "period": "2026-Q3",
+      "operation_evidence": {
+        "source": "quarterly-access-review.csv",
+        "owner": "IAM lead",
+        "result": "2 unnecessary privileges identified"
+      },
+      "exception": {
+        "status": "open",
+        "description": "Two users retain access not required by role"
+      },
+      "remediation": {
+        "action": "Revoke unnecessary access and retest the two accounts",
+        "owner": "IAM lead",
+        "due_date": "2026-11-15"
+      },
+      "oversight": {
+        "reviewer": "Security manager",
+        "decision": "Accept interim exposure until remediation due date",
+        "follow_up": "Review closure evidence on 2026-11-16"
+      }
+    }
+  ]
+}
