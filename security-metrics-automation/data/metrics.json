@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Privileged access review",
+    "numerator": 91,
+    "denominator": 100,
+    "previous_value": 97,
+    "threshold": 95,
+    "threshold_operator": "lt",
+    "risk": "Stale privileged access",
+    "action": "Review 6 overdue accounts",
+    "owner": "Identity team",
+    "decision": "Fund access-review remediation sprint"
+  },
+  {
+    "name": "Endpoint telemetry coverage",
+    "numerator": 96,
+    "denominator": 100,
+    "previous_value": 93,
+    "threshold": 95,
+    "threshold_operator": "lt",
+    "risk": "Unobserved endpoint activity",
+    "action": "Continue sensor deployment tracking",
+    "owner": "Endpoint engineering",
+    "decision": "Continue current rollout"
+  }
+]
