@@ -1,0 +1,27 @@
+{
+  "organization": "Northstar Health",
+  "mission": "Protect patient scheduling, billing, and identity services from disruption and unauthorized access.",
+  "paths": [
+    {
+      "asset": "Patient Scheduling API",
+      "risk": "Service disruption delays patient care",
+      "monitoring": "Availability and access logs",
+      "control": "Hardened configuration and vulnerability remediation",
+      "decision": "Prioritize remediation when exposure threatens scheduling"
+    },
+    {
+      "asset": "Billing Database",
+      "risk": "Unauthorized access exposes financial records",
+      "monitoring": "Database access logs and suspicious-query alerts",
+      "control": "Least-privilege access and multi-factor authentication",
+      "decision": "Escalate access gaps for immediate mitigation"
+    },
+    {
+      "asset": "Identity Directory",
+      "risk": "Compromised privileged account reaches connected services",
+      "monitoring": "Privileged-login alerts and daily access review",
+      "control": "Multi-factor authentication and session restriction",
+      "decision": "Investigate, contain, and document residual risk"
+    }
+  ]
+}
