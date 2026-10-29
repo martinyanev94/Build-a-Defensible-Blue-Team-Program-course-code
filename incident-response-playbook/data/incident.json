@@ -1,0 +1,52 @@
+{
+  "incident_id": "IR-2026-0042",
+  "scenario": "compromised_account_or_endpoint",
+  "trigger": {
+    "signals": ["unfamiliar_successful_login", "new_endpoint_registered"],
+    "threshold": "both_signals_within_30_minutes"
+  },
+  "owner": "incident_lead",
+  "steps": [
+    {
+      "id": "detect",
+      "action": "create_case_and_assign_incident_lead",
+      "evidence": ["alert_reference", "case_timeline"],
+      "exit_criteria": ["case_created", "owner_assigned"]
+    },
+    {
+      "id": "preserve",
+      "action": "capture_signins_sessions_endpoint_identifiers",
+      "evidence": ["signin_export", "session_export", "endpoint_identifier"],
+      "exit_criteria": ["evidence_references_recorded", "timeline_started"]
+    },
+    {
+      "id": "contain",
+      "action": "revoke_sessions_reset_password_isolate_endpoint",
+      "evidence": ["session_revocation_record", "reset_record", "isolation_ticket"],
+      "exit_criteria": ["no_active_unapproved_sessions", "endpoint_isolated"]
+    },
+    {
+      "id": "investigate",
+      "action": "review_signins_sessions_and_endpoint_events",
+      "evidence": ["signin_export", "session_export", "endpoint_timeline"],
+      "exit_criteria": ["initial_scope_recorded", "follow_on_activity_decided"]
+    },
+    {
+      "id": "eradicate",
+      "action": "remove_persistence_disable_unauthorized_access_rotate_tokens",
+      "evidence": ["endpoint_remediation_record", "access_review", "token_rotation_record"],
+      "exit_criteria": ["persistence_removed", "unauthorized_access_disabled", "exposed_tokens_rotated"]
+    },
+    {
+      "id": "recover",
+      "action": "verify_endpoint_with_owner_and_restore_approved_access",
+      "evidence": ["owner_verification", "reconnection_record", "access_validation"],
+      "exit_criteria": ["endpoint_released", "approved_access_verified"]
+    }
+  ],
+  "closure": {
+    "required_evidence": ["scope_decision", "containment_evidence", "eradication_evidence", "recovery_evidence"],
+    "approver": "incident_lead",
+    "exit_criteria": ["all_required_evidence_present", "no_unapproved_sessions", "corrective_actions_recorded"]
+  }
+}
