@@ -1,0 +1,50 @@
+{
+  "exercise_id": "L30-account-tabletop",
+  "title": "Compromised customer-support account",
+  "scenario": "Alex Lee's account shows an unfamiliar sign-in and a new mailbox-forwarding rule.",
+  "roles": [
+    "SOC analyst",
+    "incident coordinator",
+    "service owner",
+    "communications lead",
+    "authorization decision-maker"
+  ],
+  "prompts": [
+    {
+      "finding_id": "F-01",
+      "category": "coordination",
+      "question": "Who coordinates the response before technical work begins?",
+      "answer": "",
+      "observation": "The team discussed actions but did not name an incident coordinator.",
+      "action": "Assign an incident coordinator before technical work begins.",
+      "owner": "security manager"
+    },
+    {
+      "finding_id": "F-02",
+      "category": "communication",
+      "question": "Who approves a customer-facing message?",
+      "answer": "",
+      "observation": "The communications lead can draft a message, but no approver was recorded.",
+      "action": "Name an approver for customer-facing messages.",
+      "owner": "communications lead"
+    },
+    {
+      "finding_id": "F-03",
+      "category": "authorization",
+      "question": "Who may revoke the account during containment?",
+      "answer": "",
+      "observation": "The team proposed revoking sessions without recording decision authority.",
+      "action": "Record who may revoke the account during containment.",
+      "owner": "security manager"
+    },
+    {
+      "finding_id": "F-04",
+      "category": "recovery",
+      "question": "How is recovery verified before closure?",
+      "answer": "",
+      "observation": "The credential reset was discussed, but no post-restore verification was defined.",
+      "action": "Add a post-restore verification step.",
+      "owner": "service owner"
+    }
+  ]
+}
