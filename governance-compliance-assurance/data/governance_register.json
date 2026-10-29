@@ -1,0 +1,34 @@
+{
+  "indicators": [
+    {
+      "id": "access-review-coverage",
+      "name": "Privileged access review coverage",
+      "value": 92,
+      "unit": "percent",
+      "operator": "min",
+      "threshold": 95,
+      "owner": "Identity governance",
+      "action": "Escalate the review backlog"
+    },
+    {
+      "id": "overdue-corrective-actions",
+      "name": "Overdue corrective actions",
+      "value": 2,
+      "unit": "count",
+      "operator": "max",
+      "threshold": 0,
+      "owner": "Control assurance",
+      "action": "Escalate overdue actions"
+    },
+    {
+      "id": "high-risk-obligations",
+      "name": "Open high-risk obligations",
+      "value": 1,
+      "unit": "count",
+      "operator": "max",
+      "threshold": 0,
+      "owner": "Compliance risk",
+      "action": "Convene risk acceptance review"
+    }
+  ]
+}
