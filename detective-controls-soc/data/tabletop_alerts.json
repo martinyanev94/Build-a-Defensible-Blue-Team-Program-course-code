@@ -1,0 +1,29 @@
+[
+  {
+    "alert_id": "A-101",
+    "severity": "high",
+    "telemetry_present": ["identity", "endpoint"],
+    "telemetry_required": ["identity", "endpoint", "network"],
+    "triage_owner": "soc-analyst",
+    "escalation_minutes": 18,
+    "remediation_owner": "endpoint-team"
+  },
+  {
+    "alert_id": "A-102",
+    "severity": "high",
+    "telemetry_present": ["identity"],
+    "telemetry_required": ["identity", "endpoint", "network"],
+    "triage_owner": "soc-analyst",
+    "escalation_minutes": 42,
+    "remediation_owner": ""
+  },
+  {
+    "alert_id": "A-103",
+    "severity": "medium",
+    "telemetry_present": ["network"],
+    "telemetry_required": ["identity", "endpoint", "network"],
+    "triage_owner": "",
+    "escalation_minutes": 7,
+    "remediation_owner": ""
+  }
+]
