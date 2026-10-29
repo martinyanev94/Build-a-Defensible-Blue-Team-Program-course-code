@@ -1,0 +1,29 @@
+[
+  {
+    "id": "hr-operations",
+    "criticality": 4,
+    "sensitivity": "high",
+    "likelihood": 3,
+    "impact": 4,
+    "score": 12,
+    "assessment_period": "2026-Q4",
+    "dependencies": ["identity-service", "missing-backup"],
+    "treatment": "remediate",
+    "owner": "platform-team",
+    "deadline": "2026-11-15"
+  },
+  {
+    "id": "identity-service",
+    "criticality": 5,
+    "sensitivity": "high",
+    "likelihood": 2,
+    "impact": 4,
+    "score": 10,
+    "assessment_period": "2026-Q4",
+    "dependencies": [],
+    "treatment": "remediate",
+    "owner": "",
+    "deadline": "2026-11-10",
+    "evidence": "Quarterly access review completed 2026-10-01"
+  }
+]
