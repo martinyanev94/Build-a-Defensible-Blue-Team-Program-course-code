@@ -1,0 +1,42 @@
+[
+  {
+    "id": "M-01",
+    "stage": "Foundation",
+    "stage_order": 1,
+    "title": "Assign control owners",
+    "owner": "Security manager",
+    "evidence": "Published responsibility record",
+    "dependency": "None",
+    "review_point": "Leadership verifies every control has one accountable owner"
+  },
+  {
+    "id": "M-02",
+    "stage": "Foundation",
+    "stage_order": 1,
+    "title": "Verify critical-asset inventory",
+    "owner": "Asset owner",
+    "evidence": "Verified critical-asset report",
+    "dependency": "M-01",
+    "review_point": "Risk review confirms assets and dependencies are current"
+  },
+  {
+    "id": "M-03",
+    "stage": "Operationalize",
+    "stage_order": 2,
+    "title": "Exercise incident response",
+    "owner": "Incident-response lead",
+    "evidence": "Completed tabletop report with corrective actions",
+    "dependency": "M-02",
+    "review_point": "Readiness review checks decisions, communications, and recovery evidence"
+  },
+  {
+    "id": "M-04",
+    "stage": "Improve",
+    "stage_order": 3,
+    "title": "Evaluate emerging detection",
+    "owner": "Detection lead",
+    "evidence": "Bounded pilot coverage report",
+    "dependency": "M-02 and M-03",
+    "review_point": "Investment review compares observed coverage with the target"
+  }
+]
