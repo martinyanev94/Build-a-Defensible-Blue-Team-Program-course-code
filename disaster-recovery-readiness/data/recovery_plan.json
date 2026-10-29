@@ -1,0 +1,34 @@
+{
+  "service": "Customer API",
+  "scenario": "Ransomware disrupts the Customer API and its database dependency",
+  "checks": [
+    {
+      "id": "restore-customer-api",
+      "area": "restoration",
+      "owner": "recovery-technical-lead",
+      "evidence": "restore log and Customer API test request",
+      "pass_condition": "Clean backup restores and a test request succeeds"
+    },
+    {
+      "id": "approve-recovery",
+      "area": "decision-making",
+      "owner": "customer-business-owner",
+      "evidence": "approved go-or-no-go decision record",
+      "pass_condition": "Business owner records and approves the recovery decision"
+    },
+    {
+      "id": "approve-communications",
+      "area": "communications",
+      "owner": "communications-lead",
+      "evidence": "approved internal and customer messages with recipient log",
+      "pass_condition": "Required messages are approved and routed"
+    },
+    {
+      "id": "confirm-insurance-route",
+      "area": "insurance",
+      "owner": "",
+      "evidence": "policy reference, confirmed hotline route, and notification record",
+      "pass_condition": "Required insurance notification contacts and route are verified"
+    }
+  ]
+}
