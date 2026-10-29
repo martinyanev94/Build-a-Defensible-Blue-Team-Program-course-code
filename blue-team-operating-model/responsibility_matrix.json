@@ -1,0 +1,54 @@
+{
+  "roles": [
+    {"name": "Analyst", "focus": "Investigate alerts and preserve evidence"},
+    {"name": "Security administrator", "focus": "Configure, update, and patch security tools"},
+    {"name": "Compliance", "focus": "Review policy and control evidence"},
+    {"name": "Red team", "focus": "Perform authorized adversary testing"},
+    {"name": "Purple team", "focus": "Connect testing to defensive improvements"},
+    {"name": "Threat intelligence", "focus": "Turn threat information into defensive priorities"}
+  ],
+  "responsibilities": [
+    {
+      "path": "alert_triage",
+      "owner": "Analyst",
+      "contributors": ["Threat intelligence", "Security administrator"],
+      "escalate_to": "Incident response lead",
+      "result": "Classified alert with preserved evidence"
+    },
+    {
+      "path": "detection_tool_change",
+      "owner": "Security administrator",
+      "contributors": ["Analyst", "Purple team"],
+      "escalate_to": "Blue-team lead",
+      "result": "Tested rule or sensor change"
+    },
+    {
+      "path": "access_control_review",
+      "owner": "Compliance",
+      "contributors": ["Analyst", "Security administrator"],
+      "escalate_to": "Security governance lead",
+      "result": "Traceable access-review evidence"
+    },
+    {
+      "path": "adversary_exercise",
+      "owner": "Red team",
+      "contributors": ["Purple team", "Analyst"],
+      "escalate_to": "Blue-team lead",
+      "result": "Authorized finding with reproduction details"
+    },
+    {
+      "path": "defensive_feedback_loop",
+      "owner": "Purple team",
+      "contributors": ["Red team", "Analyst", "Security administrator"],
+      "escalate_to": "Blue-team lead",
+      "result": "Retest result and corrective action"
+    },
+    {
+      "path": "threat_led_hunt",
+      "owner": "Threat intelligence",
+      "contributors": ["Analyst", "Security administrator"],
+      "escalate_to": "Threat-hunting lead",
+      "result": "Prioritized hunt question and findings"
+    }
+  ]
+}
