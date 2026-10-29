@@ -1,0 +1,31 @@
+{
+  "service": "payments-api",
+  "failure_modes": [
+    "insecure_code",
+    "dependency_vulnerability",
+    "misconfiguration",
+    "authentication_bypass",
+    "exploit_chain",
+    "detection_evasion",
+    "exfiltration_path",
+    "runtime_behavior"
+  ],
+  "methods": {
+    "source_scan": {
+      "scope": "program source before deployment",
+      "covers": ["insecure_code", "dependency_vulnerability"]
+    },
+    "vulnerability_scan": {
+      "scope": "known weaknesses on assets and applications",
+      "covers": ["dependency_vulnerability", "misconfiguration"]
+    },
+    "penetration_test": {
+      "scope": "manual exploitation of selected systems",
+      "covers": ["authentication_bypass", "exploit_chain"]
+    },
+    "red_team": {
+      "scope": "goal-based attack path and detection evasion",
+      "covers": ["exploit_chain", "detection_evasion", "exfiltration_path"]
+    }
+  }
+}
