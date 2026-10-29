@@ -1,0 +1,66 @@
+{
+  "asset": {
+    "asset_id": "critical-workload",
+    "criticality": "critical",
+    "name": "Customer billing workload"
+  },
+  "controls": [
+    {
+      "control_id": "workload-identity",
+      "boundary": "identity",
+      "asset_criticality": "critical",
+      "failure_mode_risk": "high",
+      "owner": "Identity Engineering",
+      "verification_evidence": "role-denial test",
+      "status": "planned"
+    },
+    {
+      "control_id": "managed-device",
+      "boundary": "endpoint",
+      "asset_criticality": "critical",
+      "failure_mode_risk": "high",
+      "owner": "Endpoint Engineering",
+      "verification_evidence": "posture check",
+      "status": "planned"
+    },
+    {
+      "control_id": "network-segmentation",
+      "boundary": "network",
+      "asset_criticality": "critical",
+      "failure_mode_risk": "high",
+      "owner": "Network Engineering",
+      "verification_evidence": "restricted-path test",
+      "status": "planned"
+    },
+    {
+      "control_id": "application-authorization",
+      "boundary": "application",
+      "asset_criticality": "critical",
+      "failure_mode_risk": "high",
+      "owner": "Application Security",
+      "verification_evidence": "approved-path test",
+      "status": "planned"
+    },
+    {
+      "control_id": "separation-of-duties",
+      "boundary": "insider-risk",
+      "asset_criticality": "critical",
+      "failure_mode_risk": "medium",
+      "owner": "Security Governance",
+      "verification_evidence": "access-review record",
+      "status": "planned"
+    }
+  ],
+  "gaps": [
+    {
+      "gap_id": "behavior-visibility",
+      "description": "No preventive row establishes whether an approved identity behaves unusually.",
+      "capability": "detective"
+    },
+    {
+      "gap_id": "incident-handling",
+      "description": "No preventive row defines investigation, containment, or recovery coordination.",
+      "capability": "response"
+    }
+  ]
+}
