@@ -1,0 +1,2 @@
+# Build-a-Defensible-Blue-Team-Program-course-code
+Learn how to build a defensible blue-team program with practical, testable methods for organizing responsibilities, prioritizing risk, and improving organizational defense. This standalone course shows how to connect assets, controls, monitoring, threat intelligence, incident response, recovery, and maturity planning into an operating model that pr
