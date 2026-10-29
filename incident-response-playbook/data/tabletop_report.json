@@ -1,0 +1,33 @@
+{
+  "exercise_id": "IR-TT-2026-10",
+  "exercise_title": "Account compromise and recovery tabletop",
+  "findings": [
+    {
+      "finding_id": "F-001",
+      "observation": "Compromised accounts were identified, but the reset requirement was not connected to a tracked control change.",
+      "proposed_change": "Require a reset and MFA enrollment review for affected enterprise accounts.",
+      "change_type": "control_change",
+      "owner": "Jordan",
+      "due_date": "2026-11-08",
+      "evidence_required": "MFA enrollment review record"
+    },
+    {
+      "finding_id": "F-002",
+      "observation": "The team could not confirm that post-recovery monitoring would detect renewed suspicious activity.",
+      "proposed_change": "Add a post-recovery monitoring rule and record its validation result.",
+      "change_type": "monitoring_change",
+      "owner": "Priya",
+      "due_date": "2026-11-12",
+      "evidence_required": "Monitoring validation record"
+    },
+    {
+      "finding_id": "F-003",
+      "observation": "Recovery verification was not assigned after systems were restored.",
+      "proposed_change": "Add a recovery verification checkpoint to the incident playbook.",
+      "change_type": "playbook_revision",
+      "owner": "Maya",
+      "due_date": "2026-11-15",
+      "evidence_required": "Restoration test record"
+    }
+  ]
+}
