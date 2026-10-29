@@ -1,0 +1,21 @@
+{
+  "asset": "Customer Portal",
+  "responsibilities": [
+    {"outcome": "alert investigation", "accountable": "Analyst"},
+    {"outcome": "control change", "accountable": "Administrator"},
+    {"outcome": "targeted retest", "accountable": "Purple Team"},
+    {"outcome": "security decision", "accountable": "Security Manager"},
+    {"outcome": "residual-risk acceptance", "accountable": "Service Owner"}
+  ],
+  "feedback_loop": {
+    "trigger": "red-team finding",
+    "control_change": "Administrator updates the control",
+    "retest": "Purple Team runs a targeted retest",
+    "decision_owner": "Security Manager"
+  },
+  "staffing_assumption": {
+    "statement": "Monitoring coverage is sufficient for the current queue and escalation path.",
+    "evidence": "queue volume and escalation records",
+    "review_owner": "Security Manager"
+  }
+}
